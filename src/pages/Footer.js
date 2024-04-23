@@ -1,5 +1,6 @@
 import { Instagram, Linkedin, Facebook } from "lucide-react";
 import { NavLink } from "react-router-dom";
+import foodIcon from '../image/foodIcon.png'
 
 function Footer() {
   return (
@@ -9,8 +10,8 @@ function Footer() {
           <div className=" w-80 text-left">
             <div className="flex   gap-4  text-center mb-5">
               <img
-                className=" -m-1 w-9 h-9"
-                src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                className=" -m-1 w-9 h-9  rounded-full"
+                src={foodIcon}
                 alt="logo"
               />
               <span>Foodio</span>
