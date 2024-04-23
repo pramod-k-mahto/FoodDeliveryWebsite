@@ -2,7 +2,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { ShoppingCart } from "lucide-react";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-
+import foodIcon from '../image/foodIcon.png'
 function NavBar() {
   const [name, setName] = useState("");
   const [isValue, setIsValue] = useState(false);
@@ -45,8 +45,8 @@ function NavBar() {
       <div className="flex p-2">
         <div className="flex mx-14 gap-4 text-center">
           <img
-            className="-m-1 w-9 h-9"
-            src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+            className="-m-1 w-9 h-9 rounded-full"
+            src={foodIcon}
             alt="logo"
           />
           <span>Foodio</span>
