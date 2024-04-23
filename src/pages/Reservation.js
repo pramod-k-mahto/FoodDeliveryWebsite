@@ -15,7 +15,19 @@ function Reservation() {
   const [enterDetail, setEnterDetail] = useState(false);
   const [reservationConform, setReservationConform] = useState(false);
   const [reservationCancel, setReservationCancel] = useState(false);
-
+  const [formData, setFormData] = useState({
+    first_name: "",
+    last_name: "",
+    phone_number: "",
+    email: "",
+    select_occasion: "",
+    special_request: "",
+  });
+  const [dateForm, setDateForm] = useState({
+    date: "",
+    time: "",
+    number: "",
+  });
   const enterDeatailFunc = () => {
     setEnterDetail(!enterDetail);
   };
@@ -29,6 +41,29 @@ function Reservation() {
     setReservationCancel(!reservationCancel);
   };
 
+  const handelChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+  const handelSubmit = (e) => {
+    // console.log(formData)
+    e.preventDefault();
+    reservationConformfunc();
+  };
+
+  const submitDate = (e) => {
+    e.preventDefault();
+    // console.log(dateForm);
+    enterDeatailFunc();
+  };
+  const handelDate = (e) => {
+    setDateForm({
+      ...dateForm,
+      [e.target.name]: e.target.value,
+    });
+  };
   return (
     <>
       <div>
@@ -43,36 +78,52 @@ function Reservation() {
 
             <div className="w-72  ">
               <h1 className="text-3xl font-bold ">Book A Table </h1>
-              <div className="my-5">
-                <input
-                  type="text"
-                  placeholder="Date"
-                  className="border-2 rounded-xl pl-5 h-10"
-                />
-              </div>
-              <div className="my-5">
-                <input
-                  type="text"
-                  placeholder="Time"
-                  className="border-2 rounded-xl pl-5  h-10"
-                />
-              </div>
-              <div className="my-5">
-                <input
-                  type="number"
-                  placeholder="Party size"
-                  className="border-2 rounded-xl pl-5  h-10"
-                />
-              </div>
+              <form onSubmit={submitDate}>
+                <div className="my-5">
+                  <label htmlFor="date">
+                    <input
+                      name="date"
+                      id="date"
+                      required
+                      onChange={handelDate}
+                      type="text"
+                      placeholder="Date"
+                      className="border-2 rounded-xl pl-5 h-10"
+                    />
+                  </label>
+                </div>
+                <div className="my-5">
+                  <label htmlFor="time"></label>
+                  <input
+                    name="time"
+                    id="time"
+                    required
+                    onChange={handelDate}
+                    type="text"
+                    placeholder="Time"
+                    className="border-2 rounded-xl pl-5  h-10"
+                  />
+                </div>
+                <div className="my-5">
+                  <label htmlFor="number"></label>
+                  <input
+                    id="number"
+                    name="number"
+                    required
+                    onChange={handelDate}
+                    type="number"
+                    placeholder="Party size"
+                    className="border-2 rounded-xl pl-5  h-10"
+                  />
+                </div>
 
-              <button
-                onClick={() => {
-                  enterDeatailFunc();
-                }}
-                className=" bg-red-500 text-white w-52  hover:bg-red-300 hover:text-red-500 rounded-full py-3 px-5 my-5 text-center"
-              >
-                Book Now
-              </button>
+                <button
+                  type="submit"
+                  className=" bg-red-500 text-white w-52  hover:bg-red-300 hover:text-red-500 rounded-full py-3 px-5 my-5 text-center"
+                >
+                  Book Now
+                </button>
+              </form>
             </div>
           </div>
         </div>
@@ -104,61 +155,86 @@ function Reservation() {
               <div className="flex justify-evenly gap-5 px-5 ">
                 <div>
                   <h1 className="font-bold"> Data order</h1>
-                  <div className=" flex flex-wrap gap-1 my-2">
-                    <div>
-                      <input
-                        type="text"
-                        placeholder="First Name"
-                        className="border-2 border-slate-300 w-80 rounded-md pl-2 p-1"
-                      />
-                    </div>
-                    <div>
-                      <input
-                        type="text"
-                        placeholder="Last Name"
-                        className="border-2 border-slate-300 w-80 rounded-md pl-2 p-1"
-                      />
-                    </div>
-                    <div>
-                      <input
-                        type="text"
-                        placeholder="Phone number"
-                        className="border-2 border-slate-300 w-80 rounded-md pl-2 p-1 "
-                      />
-                    </div>
-                    <div>
-                      <input
-                        type="text"
-                        placeholder="Email Address"
-                        className="border-2 border-slate-300 w-80 rounded-md pl-2 p-1 "
-                      />
-                    </div>
-                    <div>
-                      <input
-                        type="text"
-                        placeholder="Select Occasion "
-                        className="border-2 border-slate-300 w-80 rounded-md pl-2 p-1 "
-                      />
-                    </div>
+                  <div className=" flex flex-wrap gap-y-3 my-2">
+                    <form
+                      onSubmit={handelSubmit}
+                      className=" flex flex-col gap-y-1"
+                    >
+                      <label htmlFor="first_name">
+                        <input
+                          id="first_name"
+                          name="first_name"
+                          required
+                          type="text"
+                          onChange={handelChange}
+                          placeholder="First Name"
+                          className="border-2 border-slate-300 w-80 rounded-md pl-2 p-1"
+                        />
+                      </label>
+                      <label htmlFor="last_name">
+                        <input
+                          name="last_name"
+                          id="last_name"
+                          required
+                          onChange={handelChange}
+                          type="text"
+                          placeholder="Last Name"
+                          className="border-2 border-slate-300 w-80 rounded-md pl-2 p-1"
+                        />
+                      </label>
+                      <label htmlFor="phone_number">
+                        <input
+                          name="phone_number"
+                          id="phone_number"
+                          required
+                          onChange={handelChange}
+                          type="text"
+                          placeholder="Phone number"
+                          className="border-2 border-slate-300 w-80 rounded-md pl-2 p-1 "
+                        />
+                      </label>
+                      <label htmlFor="email">
+                        <input
+                          name="email"
+                          id="email"
+                          required
+                          onChange={handelChange}
+                          type="text"
+                          placeholder="Email Address"
+                          className="border-2 border-slate-300 w-80 rounded-md pl-2 p-1 "
+                        />
+                      </label>
+                      <label htmlFor="select_occasion">
+                        <input
+                          id="select_occasion"
+                          name="select_occasion"
+                          required
+                          onChange={handelChange}
+                          type="text"
+                          placeholder="Select Occasion "
+                          className="border-2 border-slate-300 w-80 rounded-md pl-2 p-1 "
+                        />
+                      </label>
 
-                    <div>
-                      <textarea
-                        name=""
-                        id=""
-                        placeholder="Add special request"
-                        className="border-2 border-slate-300 w-80 min-h-28 rounded-md pl-2"
-                      ></textarea>
-                    </div>
-                    <div>
-                      <button
-                        onClick={() => {
-                          reservationConformfunc();
-                        }}
-                        className=" bg-red-500 text-white  hover:bg-red-300 hover:text-red-500 rounded-full py-3 px-5  w-80  text-center"
-                      >
-                        Conform reservation
-                      </button>
-                    </div>
+                      <label htmlFor="special_request">
+                        <textarea
+                          name="special_request"
+                          id="special_request"
+                          onChange={handelChange}
+                          required
+                          placeholder="Add special request"
+                          className="border-2 border-slate-300 w-80 min-h-28 rounded-md pl-2"
+                        ></textarea>
+                      </label>
+                      <div>
+                        <button
+                          type="submit"
+                          className=" bg-red-500 text-white  hover:bg-red-300 hover:text-red-500 rounded-full py-3 px-5  w-80  text-center"
+                        >
+                          Conform reservation
+                        </button>
+                      </div>
+                    </form>
                   </div>
                 </div>
 
@@ -166,16 +242,16 @@ function Reservation() {
                   <div className=" p-4 text-sm bg-slate-200">
                     <h1 className="font-bold text-black">Reservation detail</h1>
                     <div className="flex space-x-3 m-2">
-                      <Calendar /> <h1>Saturday</h1>
+                      <Calendar /> <h1>{dateForm.date}</h1>
                     </div>
                     <div className="flex space-x-3 m-2">
                       <Clock />
-                      <h1>04:30 pm</h1>
+                      <h1>{dateForm.time} pm</h1>
                     </div>
                     <div className="flex space-x-3 m-2 ">
                       <User />
                       <h1>
-                        <span>2</span> people(Standar seating)
+                        <span>{dateForm.number}</span> people(Standar seating)
                       </h1>
                     </div>
                   </div>
@@ -236,16 +312,16 @@ function Reservation() {
                   <div className=" p-4 text-sm bg-slate-200">
                     <h1 className="font-bold text-black">Reservation detail</h1>
                     <div className="flex space-x-3 m-2">
-                      <Calendar /> <h1>Saturday</h1>
+                      <Calendar /> <h1>{dateForm.date}</h1>
                     </div>
                     <div className="flex space-x-3 m-2">
                       <Clock />
-                      <h1>04:30 pm</h1>
+                      <h1>{dateForm.time} pm</h1>
                     </div>
                     <div className="flex space-x-3 m-2 ">
                       <User />
                       <h1>
-                        <span>2</span> people(Standar seating)
+                        <span>{dateForm.number}</span> people(Standar seating)
                       </h1>
                     </div>
                   </div>
@@ -314,16 +390,16 @@ function Reservation() {
                   <div className=" p-4 text-sm bg-slate-200">
                     <h1 className="font-bold text-black">Reservation detail</h1>
                     <div className="flex space-x-3 m-2">
-                      <Calendar /> <h1>Saturday</h1>
+                      <Calendar /> <h1>{dateForm.date}</h1>
                     </div>
                     <div className="flex space-x-3 m-2">
                       <Clock />
-                      <h1>04:30 pm</h1>
+                      <h1>{dateForm.time} pm</h1>
                     </div>
                     <div className="flex space-x-3 m-2 ">
                       <User />
                       <h1>
-                        <span>2</span> people(Standar seating)
+                        <span>{dateForm.number}</span> people(Standar seating)
                       </h1>
                     </div>
                   </div>
