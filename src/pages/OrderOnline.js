@@ -9,6 +9,8 @@ import { useNavigate } from "react-router-dom";
 
 function OrderOnline() {
   const dispatch = useDispatch();
+  const item = useSelector((state) => state.product);
+
   const [filterProduct, setFilterProduct] = useState([]);
   const [checkOut, setCheckOut] = useState(false);
   const [changeAddress, setChangeAddress] = useState(false);
@@ -17,7 +19,7 @@ function OrderOnline() {
   const [shippingFee, setShippingFee] = useState(50);
   const [total, setTotal] = useState(0);
   const [shippingFeeDiscount, setShippingFeeDiscount] = useState(0);
-  const [totalItem, setTotalItem] = useState(1);
+  const [totalItem, setTotalItem] = useState(item.length);
   const navigate = useNavigate();
   const [food, setFoodItem] = useState([]);
 

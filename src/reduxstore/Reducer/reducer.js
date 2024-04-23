@@ -1,5 +1,5 @@
 
-const first=1
+const first=0
 const changeCartItem=( state=first,action )=>{
 
     switch(action.type){
