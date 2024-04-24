@@ -13,7 +13,7 @@ function Login() {
       let storedValue = localStorage.getItem("myObject");
       storedValue = JSON.parse(storedValue);
       if (email && password) {
-        if (email == storedValue.email) {
+        if (email ===storedValue.email) {
           navigate("/");
         } else {
           alert("Please enter right email and password");

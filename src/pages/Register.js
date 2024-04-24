@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import Footer from "./Footer";
 function Register() {
   const navigate = useNavigate();
   const [name, setName] = useState();
@@ -9,9 +8,9 @@ function Register() {
 
   const loginHandler = (e) => {
     e.preventDefault();
-    console.log(name, email, password);
+    // console.log(name, email, password);
     if (name && email && password) {
-      const myObject = { email: email, name: name };
+      const myObject = { email: email, name: name,password:password };
       localStorage.setItem("myObject", JSON.stringify(myObject));
       navigate("/login");
     }
@@ -21,7 +20,7 @@ function Register() {
   };
   return (
     <>
-      <div className="flex flex-col p-36  ">
+      <div className="flex flex-col p-36 overflow-hidden  ">
         <button
           onClick={() => {
             navigate("/login");
@@ -74,7 +73,7 @@ function Register() {
           </form>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
 
     </>
   );
