@@ -1,5 +1,6 @@
 import map from "../image/map.png";
 import { Navigation } from "lucide-react";
+// import Footer from "./pages/Footer";
 
 function ShippingAddress() {
   return (

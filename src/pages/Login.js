@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+// import Footer from "./pages/Footer";
 
 function Login() {
   const navigate = useNavigate();
@@ -73,6 +74,8 @@ function Login() {
           </form>
         </div>
       </div>
+      {/* <Footer /> */}
+
     </>
   );
 }

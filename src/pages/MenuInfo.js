@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Star, ChevronRight, ChevronLeft,Dot } from "lucide-react";
-
+import Footer from "./Footer";
 import { useDispatch, useSelector } from "react-redux";
 import { increment, decrement } from "../reduxstore/Action/action";
 import { useNavigate } from "react-router-dom";
@@ -236,6 +236,8 @@ function MenuInfo() {
           </div>
         </div>
       </div>
+      {/* <Footer /> */}
+
     </>
   );
 }

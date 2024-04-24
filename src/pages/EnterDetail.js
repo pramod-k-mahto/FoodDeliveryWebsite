@@ -1,5 +1,5 @@
 import { X, Calendar, Clock, User } from "lucide-react";
-
+import Footer from "./Footer";
 function EnterDetail() {
   return (
     <>
@@ -108,6 +108,8 @@ function EnterDetail() {
           </div>
         </div>
       </div>
+      <Footer />
+
     </>
   );
 }

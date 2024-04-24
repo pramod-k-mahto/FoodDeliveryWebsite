@@ -6,16 +6,15 @@ import Contact from "./pages/Contact";
 import OrderOnline from "./pages/OrderOnline";
 import Reservation from "./pages/Reservation";
 import Menu from "./pages/Menu";
-import Footer from "./pages/Footer";
-import Checkout from "./pages/Checkout";
+// import Checkout from "./pages/Checkout";
 import EnterDetail from "./pages/EnterDetail";
-import ReservationConform from "./pages/ReservationConform";
-import ReservationCancel from "./pages/ReservationCancel";
+// import ReservationConform from "./pages/ReservationConform";
+// import ReservationCancel from "./pages/ReservationCancel";
 import ShippingAddress from "./pages/ShippingAddress";
 import Chef from "./pages/Chef";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-
+import PageNotFound from "./pages/PageNotFound";
 function App() {
   return (
     <>
@@ -27,18 +26,14 @@ function App() {
         <Route path="/orderOnline" element={<OrderOnline />} />
         <Route path="/reservation" element={<Reservation />} />
         <Route path="/menu" element={<Menu />} />
-        {/* <Route path="/checkout" element={<Checkout />} /> */}
-
         <Route path="/enterdetail" element={<EnterDetail />} />
         <Route path="/shippingAddress" element={<ShippingAddress />} />
         <Route path="/chef" element={<Chef />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-
-        
+        <Route path="*" element={<PageNotFound />} />{" "}
+        {/* Updated component name */}
       </Routes>
-
-      <Footer />
     </>
   );
 }

@@ -4,6 +4,7 @@ import NavBar from "./NavBar";
 import {useNavigate} from 'react-router-dom'
 import { Star,ChevronRight,ChevronLeft } from "lucide-react";
 import CustomerReview from "./CustomerReview";
+import Footer from "./Footer";
 function Home() {
 
   const navigate=useNavigate()
@@ -187,6 +188,8 @@ function Home() {
           </div>
         </div>
       </div>
+      <Footer />
+
     </>
   );
 }

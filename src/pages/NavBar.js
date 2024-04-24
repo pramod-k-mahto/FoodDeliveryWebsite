@@ -3,6 +3,7 @@ import { ShoppingCart } from "lucide-react";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import foodIcon from '../image/foodIcon.png'
+
 function NavBar() {
   const [name, setName] = useState("");
   const [isValue, setIsValue] = useState(false);
@@ -58,9 +59,7 @@ function NavBar() {
           <NavLink to="/menu" className="hover:underline hover:text-red-600">
             Menu
           </NavLink>
-          <NavLink to="/about" className="hover:underline hover:text-red-600">
-            About Us
-          </NavLink>
+          
           <NavLink
             to="/orderOnline"
             className="hover:underline hover:text-red-600"
@@ -75,6 +74,9 @@ function NavBar() {
           </NavLink>
           <NavLink to="/contact" className="hover:underline hover:text-red-600">
             Contact Us
+          </NavLink>
+          <NavLink to="/about" className="hover:underline hover:text-red-600">
+            About Us
           </NavLink>
         </div>
         <div className="mx-11 flex gap-6">

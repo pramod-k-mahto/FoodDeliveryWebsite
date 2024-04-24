@@ -1,9 +1,9 @@
 import NavBar from "./NavBar";
-
+import Footer from "./Footer";
 function Chef() {
   return (
     <>
-            <NavBar />
+      <NavBar />
 
       <div>
         <div className="flex flex-wrap justify-center gap-4 m-10 mb-20">
@@ -46,7 +46,7 @@ function Chef() {
             <h1 className=" font-bold">Suman kumari</h1>
             <p className="text-slate-500">Head chef</p>
           </div>
-          
+
           <div className=" w-60 text-center">
             <div className="bg-red-300 w-56 rounded-3xl m-auto h-80 ">
               <img
@@ -71,9 +71,6 @@ function Chef() {
           </div>
           {/* chef 3 end */}
 
-
-
-
           <div className=" w-60 text-center">
             <div className="bg-red-300 w-56 h-80 rounded-3xl m-auto ">
               <img
@@ -86,11 +83,6 @@ function Chef() {
             <p className="text-slate-500">Head chef</p>
           </div>
 
-
-
-
-
-
           <div className=" w-60 text-center">
             <div className="bg-red-300 w-56 h-80 rounded-3xl m-auto ">
               <img
@@ -102,16 +94,6 @@ function Chef() {
             <h1 className=" font-bold">Suman kumari</h1>
             <p className="text-slate-500">Head chef</p>
           </div>
-
-
-
-
-
-
-
-
-
-
 
           <div className=" w-60 text-center">
             <div className="bg-red-300 w-56 h-80 rounded-3xl m-auto object-fill ">
@@ -124,9 +106,10 @@ function Chef() {
             <h1 className=" font-bold">Suman kumari</h1>
             <p className="text-slate-500">Head chef</p>
           </div>
-
         </div>
       </div>
+      <Footer />
+
     </>
   );
 }

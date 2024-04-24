@@ -6,7 +6,7 @@ import { Star } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
 import { remove } from "../reduxstore/Action/action";
 import { useNavigate } from "react-router-dom";
-
+import Footer from "./Footer";
 function OrderOnline() {
   const dispatch = useDispatch();
   const item = useSelector((state) => state.product);
@@ -396,6 +396,8 @@ function OrderOnline() {
           </div>
         </div>
       )}
+            <Footer />
+
     </>
   );
 }

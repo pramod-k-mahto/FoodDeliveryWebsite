@@ -7,6 +7,7 @@ import {
   CalendarCheck,
   SquareCheckBig,
 } from "lucide-react";
+import Footer from "./pages/Footer";
 
 function ReservationConform() {
   return (

@@ -1,5 +1,5 @@
 import NavBar from "./NavBar";
-
+import Footer from "./Footer";
 import map from "../image/map.png";
 import { useState } from "react";
 function Contact() {
@@ -119,6 +119,8 @@ function Contact() {
           </div>
         </div>
       </div>
+      <Footer />
+
     </>
   );
 }

@@ -1,0 +1,21 @@
+.not-found-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .not-found-title {
+    font-size: 48px;
+    color: #333;
+  }
+  
+  .not-found-text {
+    font-size: 24px;
+    color: #666;
+    margin-top: 20px;
+  }
+  
+  .not-found-image {
+    margin-top: 50px;
+    max-width: 100%;
+  }
+  

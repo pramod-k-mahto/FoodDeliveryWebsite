@@ -1,6 +1,6 @@
 import NavBar from "./NavBar";
 import { useState } from "react";
-
+import Footer from "./Footer";
 import {
   X,
   Calendar,
@@ -127,10 +127,12 @@ function Reservation() {
             </div>
           </div>
         </div>
+        <Footer />
+
       </div>
 
       {enterDetail ? (
-        <div className="  w-[98vw] h-[184%] -top-20 bg-opacity-30 backdrop-blur-sm absolute  ">
+        <div className="  w-[98vw] mt-4 h-[184%] -top-20 bg-opacity-30 backdrop-blur-sm absolute   ">
           <div className="p-10">
             <div className="w-[50vw]  m-auto   bg-white rounded  ">
               <div className="text-center font-bold text-xl  clear-both px-5 mt-10">

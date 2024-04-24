@@ -8,6 +8,7 @@ import image3 from "../image/image3.webp";
 import image4 from "../image/image4.jpg";
 import image6 from "../image/image6.jpg";
 import image7 from "../image/image7.jpg";
+// import Footer from "./pages/Footer";
 
 function CustomerReview() {
   const settings = {

@@ -91,7 +91,7 @@ function Footer() {
           </div>
         </div>
         <div>
-          <h1 className="text-center p-10">Copyright@2024</h1>
+          <h1 className="text-center p-10">Copyright&copy;2024</h1>
         </div>
       </div>
     </>

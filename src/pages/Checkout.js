@@ -1,3 +1,7 @@
+import Footer from "./pages/Footer";
+
+
+
 function Checkout() {
   return (
     <>
@@ -127,6 +131,8 @@ function Checkout() {
           </div>
         </div>
       </div>
+      <Footer />
+
     </>
   );
 }

@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import Footer from "./Footer";
 function Register() {
   const navigate = useNavigate();
   const [name, setName] = useState();
@@ -73,6 +74,8 @@ function Register() {
           </form>
         </div>
       </div>
+      <Footer />
+
     </>
   );
 }
