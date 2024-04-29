@@ -1,14 +1,13 @@
-import { useState } from "react";
+import React from "react";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 import image1 from "../image/image1.jpeg";
 import image2 from "../image/image2.jpg";
 import image3 from "../image/image3.webp";
 import image4 from "../image/image4.jpg";
 import image6 from "../image/image6.jpg";
 import image7 from "../image/image7.jpg";
-// import Footer from "./pages/Footer";
 
 function CustomerReview() {
   const settings = {
@@ -22,6 +21,65 @@ function CustomerReview() {
     cssEase: "linear",
     variableHeight: true, // Set to true for variable height slides
   };
+
+  const CustomerReviewData = [
+    {
+      name: "Pramod Mahto",
+      image: image1,
+      position: "Teacher",
+      message:
+        "The product was well-designed and easy to use. I highly recommend it!",
+    },
+    {
+      name: "Ram Kumar",
+      image: image2,
+      position: "Customer",
+      message:
+        "I had a great experience with this service. The support team was very helpful.",
+    },
+    {
+      name: "Siv Ram",
+      image: image3,
+      position: "User",
+      message:
+        "I found the guidance provided by the team to be invaluable. They really went above and beyond!",
+    },
+    {
+      name: "Raja Ram ",
+      image: image4,
+      position: "Student",
+      message:
+        "The outcome exceeded my expectations. I'm extremely satisfied with the result.",
+    },
+    {
+      name: "Kumar Ram ",
+      image: image6,
+      position: "Student",
+      message:
+        "The outcome exceeded my expectations. I'm extremely satisfied with the result.",
+    },
+    {
+      name: "Mohan ",
+      image: image7,
+      position: "Student",
+      message:
+        "The outcome exceeded my expectations. I'm extremely satisfied with the result.",
+    },
+    {
+      name: "Pramod ",
+      image: image2,
+      position: "Researcher",
+      message:
+        "I had a great experience with this service. The support team was very helpful.",
+    },
+    {
+      name: "Krishana ",
+      image: image3,
+      position: "User",
+      message:
+        "I found the guidance provided by the team to be invaluable. They really went above and beyond!",
+    },
+  ];
 
   return (
     <>
@@ -38,7 +96,7 @@ function CustomerReview() {
                   <div className="flex items-center mt-4">
                     <img
                       className="w-14 h-14 rounded-full mr-4"
-                      src={item.imgage}
+                      src={item.image}
                       alt=""
                     />
                     <div>
@@ -57,70 +115,3 @@ function CustomerReview() {
 }
 
 export default CustomerReview;
-
-const CustomerReviewData = [
-  {
-    name: "Pramod Mahto",
-    imgage: image1,
-
-    position: "Teacher",
-    message:
-      "The product was well-designed and easy to use. I highly recommend it!",
-  },
-  {
-    name: "Ram Kumar",
-    imgage: image2,
-
-    position: "Customer",
-    message:
-      "I had a great experience with this service. The support team was very helpful.",
-  },
-  {
-    name: "Siv Ram",
-    imgage: image3,
-
-    position: "User",
-    message:
-      "I found the guidance provided by the team to be invaluable. They really went above and beyond!",
-  },
-  {
-    name: "Raja Ram ",
-    imgage: image4,
-
-    position: "Student",
-    message:
-      "The outcome exceeded my expectations. I'm extremely satisfied with the result.",
-  },
-  {
-    name: "Kumar Ram ",
-    imgage: image6,
-
-    position: "Student",
-    message:
-      "The outcome exceeded my expectations. I'm extremely satisfied with the result.",
-  },
-  {
-    name: "Mohan ",
-    imgage: image7,
-
-    position: "Student",
-    message:
-      "The outcome exceeded my expectations. I'm extremely satisfied with the result.",
-  },
-  {
-    name: "Pramod ",
-    imgage: image2,
-
-    position: "Researcher",
-    message:
-      "I had a great experience with this service. The support team was very helpful.",
-  },
-  {
-    name: "Krishana ",
-    imgage: image3,
-
-    position: "User",
-    message:
-      "I found the guidance provided by the team to be invaluable. They really went above and beyond!",
-  },
-];
