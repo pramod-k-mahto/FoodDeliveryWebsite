@@ -35,7 +35,9 @@ function OrderOnline() {
 
   const productFilter = () => {
     let filteredProduct = food.filter((item) => cartProduct.includes(item.id));
-    setFilterProduct(filteredProduct.map(item => ({ ...item, itemNumber: 1 })));
+    setFilterProduct(
+      filteredProduct.map((item) => ({ ...item, itemNumber: 1 }))
+    );
     setCheckOutItem(filteredProduct.length);
   };
 
@@ -56,7 +58,10 @@ function OrderOnline() {
   }, [food, cartProduct]);
 
   useEffect(() => {
-    let cost = filterProduct.reduce((acc, item) => acc + item.caloriesPerServing, 0);
+    let cost = filterProduct.reduce(
+      (acc, item) => acc + item.caloriesPerServing,
+      0
+    );
     setSubtotal(cost);
     setTotal(cost + shippingFee);
   }, [filterProduct, shippingFee]);
@@ -277,7 +282,9 @@ function OrderOnline() {
                     </div>
 
                     <div className="leading-10">
-                      <div className="text-3xl">RS.{item.caloriesPerServing}</div>
+                      <div className="text-3xl">
+                        RS.{item.caloriesPerServing}
+                      </div>
                       <div className="text-3xl my-3">
                         <div className="flex gap-1">
                           {[...Array(rateItem)].map((_, index) => (
@@ -309,7 +316,9 @@ function OrderOnline() {
                             item.itemNumber--;
                             setTotalItem(totalItem - 1);
                             setSubtotal(subtotal - item.caloriesPerServing);
-                            setTotal(subtotal + shippingFee - item.caloriesPerServing);
+                            setTotal(
+                              subtotal + shippingFee - item.caloriesPerServing
+                            );
                           }
                         }}
                         className="bg-red-500 text-white hover:bg-red-300 hover:text-red-500 rounded w-7 p-1"
@@ -324,7 +333,9 @@ function OrderOnline() {
                           item.itemNumber++;
                           setTotalItem(totalItem + 1);
                           setSubtotal(subtotal + item.caloriesPerServing);
-                          setTotal(subtotal + shippingFee + item.caloriesPerServing);
+                          setTotal(
+                            subtotal + shippingFee + item.caloriesPerServing
+                          );
                         }}
                         className="bg-red-500 text-white hover:bg-red-300 hover:text-red-500 rounded w-7 p-1"
                       >
@@ -396,8 +407,7 @@ function OrderOnline() {
           </div>
         </div>
       )}
-            <Footer />
-
+      <Footer />
     </>
   );
 }

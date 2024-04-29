@@ -84,7 +84,7 @@ const CustomerReviewData = [
       "I found the guidance provided by the team to be invaluable. They really went above and beyond!",
   },
   {
-    name: "Kumar Ram ",
+    name: "Raja Ram ",
     imgage: image4,
 
     position: "Student",
@@ -100,11 +100,27 @@ const CustomerReviewData = [
       "The outcome exceeded my expectations. I'm extremely satisfied with the result.",
   },
   {
-    name: "Kumar Ram ",
+    name: "Mohan ",
     imgage: image7,
 
     position: "Student",
     message:
       "The outcome exceeded my expectations. I'm extremely satisfied with the result.",
+  },
+  {
+    name: "Pramod ",
+    imgage: image2,
+
+    position: "Researcher",
+    message:
+      "I had a great experience with this service. The support team was very helpful.",
+  },
+  {
+    name: "Krishana ",
+    imgage: image3,
+
+    position: "User",
+    message:
+      "I found the guidance provided by the team to be invaluable. They really went above and beyond!",
   },
 ];
