@@ -86,7 +86,7 @@ function Reservation() {
                       id="date"
                       required
                       onChange={handelDate}
-                      type="text"
+                      type="date"
                       placeholder="Date"
                       className="border-2 rounded-xl pl-5 h-10"
                     />
@@ -99,7 +99,7 @@ function Reservation() {
                     id="time"
                     required
                     onChange={handelDate}
-                    type="text"
+                    type="time"
                     placeholder="Time"
                     className="border-2 rounded-xl pl-5  h-10"
                   />
